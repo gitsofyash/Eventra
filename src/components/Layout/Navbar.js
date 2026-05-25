@@ -859,28 +859,9 @@ const Navbar = ({ cursorEnabled, toggleCursor }) => {
   />
 </Link>
 
-    {/* Desktop Nav */}
-    <div className="hidden lg:flex items-center justify-center gap-3 xl:gap-4 flex-1 min-w-0">
-      <NavList
-        location={location}
-        openDropdown={openDropdown}
-        onToggleGroup={(name) =>
-          setOpenDropdown(openDropdown === name ? null : name)
-        }
-        isMobile={false}
-      />
-    </div>
-
-    {/* Right Controls */}
-    <div className="hidden lg:flex items-center gap-2 shrink-0 pl-2">
-      <ThemeToggleButton
-        isDarkMode={isDarkMode}
-        toggleTheme={toggleTheme}
-        isMobile={false}
-      />
-
           <DesktopNavLinks openDropdown={openDropdown} setOpenDropdown={setOpenDropdown} />
 
+          {/* Right Controls */}
           <div className="hidden lg:flex items-center gap-2 shrink-0 pl-2">
             <motion.button
               whileHover={{ scale: 1.05 }}
